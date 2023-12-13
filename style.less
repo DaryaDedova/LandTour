@@ -1,0 +1,879 @@
+@white: white;
+@border-color: rgb(168, 168, 168);
+@header-hover:rgb(182, 112, 68);
+@background-button: rgba(255, 255, 255, 0);
+@black:black;
+
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Marmelad';
+}
+
+@font-face {
+    font-family: "Marmelad";
+    src: url('font/marmelad-regular-webfont.woff') format("woff2"),
+         url('font/marmelad-regular-webfont.woff2') format("woff");
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/* ________header______ */
+
+header{
+    display: grid;
+    padding: 1%;
+    /* grid-template-columns: 1fr 1fr; */
+    grid-template-columns: repeat(2, 1fr);
+    border-bottom: 1px solid @border-color;
+}
+
+.head_two img {
+    /* Размер изображений */
+    width: 25px;
+}
+
+.head_two{
+    /* Картинки */
+    display: flex;
+    gap: 30px;
+    justify-self: end;
+}
+
+.head_one {
+    display: flex;
+    gap: 30px;
+}
+
+.logo {
+    text-transform: uppercase;
+    font-size: 14pt;
+    font-weight: bolder;
+}
+.head_one a {
+    text-decoration: none;
+    color: @black;
+}
+.head_one a:hover {
+    color: @header-hover;
+}
+
+.menu {
+    display: none;
+}
+
+/* ___________main____________ */
+
+.box {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-auto-rows: minmax(500px, auto);
+}
+
+.box img {
+    width: 100%;
+    height: 100%;
+}
+
+.box div:nth-child(1){
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center; */
+
+    justify-self: center;
+    align-self: center;    
+    padding: 50px;
+}
+
+h1 {
+    margin-bottom: 8%;
+    font-size: 30pt;
+}
+.p1 {
+    text-align: justify;
+    font-size: 16pt;
+    margin-bottom: 20px;
+}
+
+.p2 {
+    text-align: justify;
+    font-size: 12pt;
+    margin-bottom: 20px;
+}
+
+.start {
+    background-color: @white;
+    border: 1px solid @border-color;
+    border-radius: 5px;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 20px 30px;
+    color: @border-color;
+    font-size: 14pt;
+}
+
+.box1 {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    border-bottom: 1px solid @border-color;
+    grid-template-rows: minmax(350px, auto);
+}
+
+.box1 img {
+    width: 100%;
+    height: 100%;
+}
+
+.box1 div:nth-child(2) {
+    justify-self: center;
+    align-self: center;
+    /* background-color: aqua; */
+    width: 80%;
+}
+
+.box2 {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    border-bottom: 1px solid @border-color;
+    grid-template-rows: minmax(350px, auto);
+}
+
+.box2 img {
+    width: 100%;
+}
+
+.box2 div:nth-child(1){
+    justify-self: center;
+    align-self: center;
+    /* background-color: aqua; */
+    width: 80%;
+}
+
+.box1 h3, .box2 h3{
+    margin-bottom: 5%;
+    font-size: 25pt;
+    font-weight: normal;
+}
+
+.box1 p, .box2 p {
+    text-align: justify;
+    font-size: 12pt;
+    margin-bottom: 20px;
+}
+
+.more{
+    background-color: @white;
+    border: 1px solid @border-color;
+    border-radius: 5px;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 15px 25px;
+    color: @border-color;
+    font-size: 14pt;
+}
+
+/* ______________gallery________________ */
+
+
+.gal {
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+.gal h3{
+    margin-bottom: 5%;
+    font-size: 25px;
+    margin-top: 5%;
+    font-weight: normal;
+    text-align: center;
+}
+
+.galImg {
+    width: 100%;
+    // grid-template-rows: minmax(300px, auto);
+}
+.galImg_img{
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr;
+    width: 100%;
+    text-align: center;
+    .left{
+        grid-column: 1;
+        grid-row: 1;
+        align-items: center;
+        width: 70px;
+        height: 70px;
+        border: none;
+        color: white;
+        font-weight: bold;
+        background-color: rgba(255, 255, 255, 0.181);
+        border-radius: 50px;
+        font-size: 20pt;
+        cursor: pointer;
+        z-index: 1;
+        align-self: center;
+        justify-self: center;
+    }
+
+    .right{
+        grid-column: 3;
+        grid-row: 1;
+        align-items: center;
+        width: 70px;
+        height: 70px;
+        border: none;
+        color: white;
+        font-weight: bold;
+        background-color: rgba(255, 255, 255, 0.181);
+        border-radius: 50px;
+        font-size: 20pt;
+        cursor: pointer;
+        z-index: 1;
+        align-self: center;
+        justify-self: center;
+    }
+
+    #src{
+        width: 100%;
+        height: 700px;
+        grid-column: 1/span 3;
+        grid-row: 1;
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+}
+
+
+// .galImg img{
+//     width: 100%;
+//     height: 100%;
+// }
+
+
+/* .st1, .st2, .galText{
+    display: none;
+} */
+
+.st1, .st2 {
+    font-size: 55pt;
+    color: @white;
+    display: none;
+}
+
+.st1 {
+    grid-column: 1;
+    grid-row: 1;
+    justify-self: start;
+    align-self: center;
+    z-index: 1;
+    padding-left: 10px;
+}
+
+// .galImg .galim1 {
+//     grid-column: 1;
+//     grid-row: 1;
+// }
+
+.st2 {
+    grid-column: 4;
+    grid-row: 1;
+    justify-self: end;
+    align-self: center;
+    z-index: 1;
+    padding-right: 10px;
+}
+
+// .galImg .galim4 {
+//     grid-column: 4;
+//     grid-row: 1;
+// }
+
+// .galImg .galim2 {
+//     grid-column: 2;
+//     grid-row: 1;
+// }
+
+.galText {
+    grid-column: 2;
+    grid-row: 1;
+    color: @white;
+    justify-self: center;
+    align-self: center;
+    text-align: center;
+    padding: 10%;    
+    display: none;
+}
+
+.galText h4 {
+    margin-bottom: 15%;
+    font-weight: normal;
+    font-size: 16pt;
+}
+
+
+.galText p {
+    margin-bottom: 15%;
+    font-size: 12pt;
+}
+
+.galMore {
+    background-color: @background-button;
+    border: 1px solid @white;
+    border-radius: 5px;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 10px 20px;
+    color:@white;
+    font-size: 12pt;
+}
+
+// .galImg:hover .st1 {
+//     display: block;
+// }
+
+// .galImg:hover .st2 {
+//     display: block;
+// }
+
+// .galImg:hover .galText {
+//     display: block;
+// }
+
+/* _____________табличка____________ */
+
+
+.tab {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+
+    padding: 0 3% 5% 3%;
+
+}
+
+.tab h3 {
+    grid-column: 1/ span 3;
+    grid-row: 1;
+    /* background-color: rgba(137, 43, 226, 0.582); */
+
+    margin-bottom: 5%;
+    font-size: 25pt;
+    font-weight: normal;
+    text-align: center;
+    padding-top: 20px;
+}
+.tab div{
+    padding: 15%;
+
+    justify-self: center;
+    align-self: center;
+    text-align: center;
+}
+
+.tab h4 {
+    padding-top: 2%;
+    padding-bottom: 8%;
+}
+
+.boxBorder1, .boxBorder2, .boxBorder4, .boxBorder5 {
+    border-right: 1px solid @border-color;
+}
+
+.boxBorder1, .boxBorder2, .boxBorder3 {
+    border-bottom: 1px solid @border-color;
+}
+
+
+.tab div .icon {
+    font-size: 30pt;
+}
+
+/* _______________________ФОРМА______________________ */
+
+
+.form h3{
+    margin-bottom: 5%;
+    font-size: 25px;
+    margin-top: 5%;
+    font-weight: normal;
+    text-align: center;
+}
+
+.FormsTow{
+    /* width: 1fr; */
+    /* background-color: rgba(137, 43, 226, 0.563); */
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row-gap: 1%;
+
+    /* justify-items: center; */
+    width: 60%;
+    margin: auto;
+}
+
+.FormsTow .block1 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 7%;
+
+    width: 100%;
+    padding: 1% 3%;
+    /* background-color: aquamarine; */
+    box-sizing: border-box;
+}
+
+.block1 input {
+    padding: 3%;
+    /* border-radius: 5px; */
+    width: 90%;
+}
+
+.block1 input::placeholder {
+    color: lightgrey;
+    font-size: 13em;
+    font-style: italic;
+}
+
+.block1 div{
+    font-weight: bold;
+}
+
+.FormsTow .block2 {
+    display: flex;
+    gap: 2%;
+    width: 100%;
+    /* padding: 2%; */
+    box-sizing: border-box;
+    padding: 1% 3%;
+
+    /* background-color: blue; */
+}
+
+.FormsTow .block2 div {
+    font-weight: bold;
+}
+
+
+/* _____________________3 блок_______________ */
+
+.FormsTow>div:nth-child(3)  {
+    padding: 1% 3%;
+    box-sizing: border-box;
+    width: 100%;
+    /* background-color: blueviolet; */
+}
+
+.FormsTow select {
+    padding: 1% 3%;
+    width: 100%;
+    margin-top: 1%;
+}
+
+.FormsTow>div:nth-child(3) div {
+    font-weight: bold;
+}
+
+
+/* _____________________4 блок________________ */
+
+
+.FormsTow>div:nth-child(4) {
+    padding: 1% 3%;
+    box-sizing: border-box;
+    /* background-color: bisque; */
+}
+
+.FormsTow textarea {
+    width: 100%;
+    margin-top: 1%;
+}
+
+.FormsTow>div:nth-child(4) div {
+    font-weight: bold;
+}
+
+/* ______________________5 блок_____________________ */
+
+.FormsTow>div:nth-child(5) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 1% 3%;
+    box-sizing: border-box;
+}
+
+.FormsTow>div:nth-child(5) .send {
+    justify-self: end;
+    background-color: @white;
+    border: 1px solid @border-color;
+    border-radius: 5px;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 10px 20px;
+    color:@border-color;
+    font-size: 14pt;
+}
+
+.FormsTow>div:nth-child(5) label {
+    font-weight: bold;
+
+}
+
+.form {
+    border-bottom: 1px solid @border-color;
+    padding-bottom: 5%;
+}
+
+// __________________блок 6________________
+
+.FormsTow .block6 {
+    padding: 1% 3%;
+    font-size: 14pt;
+    font-weight: bold;
+    margin-top: 10px;
+
+    a{
+        text-decoration: none;
+        color: @border-color;
+        padding: 1% 3%;
+        border: 1px solid @border-color;
+        border-radius: 5px;
+    }
+}
+
+
+/* ____________подвал_____________ */
+
+footer {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row-gap: 40%;
+    padding: 5% 3%;
+}
+
+footer .box_img {
+    display: flex;
+    gap: 3%;
+    justify-self: center;
+}
+
+footer .box_img div {
+    width: 50px;
+    height: 30px;
+    border-radius: 50%;
+    padding: 3%;
+    border: 1px solid @border-color;
+
+}
+
+footer .box_img img{
+    width: 100%;
+    height: 100%;
+}
+
+footer .copy {
+    justify-self: center;
+    text-transform: uppercase;
+}
+
+@media screen and (min-width: 600px) and (max-width: 850px) {
+    header{
+        padding: 3%;
+        grid-template-columns: 1fr;
+    }
+        
+    .head_two{ 
+        display: none;
+    }
+
+    /* _________se1 Блоки с картинками и кнопками_________ */
+
+
+    .box {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .box img {
+        width: 100%;
+    }
+
+    .box div:nth-child(1){
+        justify-self: center;
+        align-self: center;    
+        padding: 50px;
+    }
+
+    h1 {
+        /* margin-bottom: 8%; */
+        font-size: 25pt;
+    }
+    .p1 {
+        font-size: 14pt;
+    }
+
+    .p2 {
+        font-size: 10pt;
+    }
+
+    .start {
+        padding: 15px 20px;
+        font-size: 12pt;
+    }
+
+/* __________________________________________ */
+
+
+    .box1 {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .box1 div:nth-child(2) {
+        padding: 7% 3%;
+    }
+
+    .box2 div:nth-child(1) {
+        padding: 7% 3%;
+    }
+
+    .box2 {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .box1 h3, .box2 h3{
+        font-size: 22pt;
+        margin-top: 10%;
+        margin-bottom: 10%;
+    }
+
+    .box1 p, .box2 p {
+        font-size: 10pt;
+    }
+
+    .more{
+        padding: 15px 20px;
+        font-size: 12pt;
+        margin-bottom: 10%;
+    }
+
+/* ________________________Галерея____________________________ */
+    
+    // .galImg {
+    //     grid-template-columns: 2fr 2fr;
+    // }
+
+    // .galImg .galim3 {
+    //     display: none;
+    // }
+
+    // .galImg .galim4 {
+    //     display: none;
+    // }
+    // .galImg:hover .st1 {
+    //     display: none;
+    // }
+
+    // .galImg:hover .st2 {
+    //     display: none;
+    // }
+
+    // .galImg:hover .galText {
+    //     display: none;
+    // }
+
+    /* ____________________ТАБЛИЦА____________________________ */
+
+        
+    .tab {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .tab h3 {
+        grid-column: 1/ span 2;
+    }
+
+    .boxBorder1, .boxBorder3, .boxBorder5 {
+        border-right: 1px solid @border-color;
+    }
+
+    .boxBorder1, .boxBorder4, .boxBorder3 {
+        border-bottom: 1px solid @border-color;
+    }
+
+    .boxBorder2, .boxBorder4 {
+        border-right: none;
+    }
+
+    /* _______________Подвал__________________ */
+
+    footer {
+        padding-bottom: 10%;
+    }
+
+    footer .box_img div {
+        width: 40px;
+        height: 20px;
+    }
+    
+    .block1 input::placeholder {
+        font-size: 10em;
+    }
+
+    .FormsTow>div:nth-child(5) label {
+        align-self: center;
+    }
+}
+
+@media screen and (max-width: 600px){
+    /* _____________навигация____________ */
+         
+    .head_one {
+        display: inline-block;
+    }
+
+    .head_one a {
+        display: none;
+    }
+    
+    .head_two{
+        /* Картинки */
+        display: none;
+    }
+    
+    .logo {
+        font-size: 12pt;
+        padding: 10%;
+    }
+
+    header {
+    border-bottom: none;
+    }
+    
+    /* ___________main____________ */
+    
+    .box,.box1 {
+        grid-template-columns: 1fr;
+        border-bottom: none;
+    }
+
+    .box h1 {
+        font-weight: normal;
+    }
+    
+    .box div:nth-child(1){    
+        grid-row: 2;
+    }
+    
+    
+    .more, .start{
+        padding: 15px 20px;
+        font-size: 12pt;
+        margin-bottom: 10%;
+    }
+    
+    .box1 div:nth-child(2) {
+        padding: 10% 0;
+    }
+    
+    .box2 {
+        grid-template-columns: 1fr;
+    }
+    
+    .box2 div:nth-child(1){
+        grid-row: 2;
+        padding: 10% 0;
+    }
+    .box1 h3, .box2 h3, .box1 p, .box2 p{
+        margin-bottom: 10%;
+    }
+    
+    // .galImg .galim2, .galImg .galim3, .galImg .galim4 {
+    //     display: none;
+    // }
+
+    .gal {
+        padding-top: 10%;
+        padding-bottom: 10%;
+    }
+    
+    .galImg {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* __________________таблица___________ */
+
+    .tab {
+        grid-template-columns: 1fr;
+        margin: 0 10%;
+    }
+    
+    .tab h3 {
+        grid-column: 1;
+    }
+    
+    .boxBorder1, .boxBorder2, .boxBorder3, .boxBorder4, .boxBorder5, .boxBorder6 {
+        border-right: none;
+        border-bottom: 1px solid @border-color;
+    }
+
+    .FormsTow {
+        width: 80%;
+        padding-bottom: 15%;
+    }
+    
+    .FormsTow .block1 {
+        grid-template-columns: 1fr;
+        margin-bottom: 10%;
+    }
+    
+    .block1 input::placeholder {
+        font-size: 14pt;
+    }
+    
+    .block1 div{
+        font-weight: bold;
+    }
+    
+    .FormsTow .block2 {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .FormsTow .block2 div {
+        grid-column: 1/ span 3 ;
+        margin-bottom: 2%;
+    }
+
+    .FormsTow>div:nth-child(5) label {
+        align-self: center;
+    }
+
+    .form h3 {
+        padding-top: 15%;
+    }
+
+    footer {
+        padding: 10% 3%;
+    }
+    
+    
+    footer .box_img div {
+        width: 30px;
+        height: 17px;
+    
+    }
+
+/* ___________________________иконка меню______________________ */
+
+    .menu {
+        display: block;
+        justify-self: end;
+        align-self: center;
+        padding-right: 10%;
+    }
+
+    .menu img {
+        width: 45px;
+        height: 45px;
+    }
+
+}
