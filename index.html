@@ -8,6 +8,12 @@
     <link rel="stylesheet" href="icomoon/style.css">
     <link rel="stylesheet/less" type="text/less" href="style.less">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="superfish.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="hoverIntent.js"></script>
+    <script src="superfish.js"></script>
+    <script src="script.js"></script>
+    
 </head>
 <body>
     <header>
@@ -15,18 +21,63 @@
             <div class="logo">
                 tour-giude
             </div>
-            <div>
-                <a href="#">Stories</a>
-            </div>
-            <div>
-                <a href="#">Gallery</a>
-            </div>
-            <div>
-                <a href="#">Features</a>
-            </div>
-            <div>
-                <a href="#">Write to us</a>
-            </div>
+            <ul class="sf-menu">
+                <li class="current">
+                    <a href="#">Меню</a>
+                    <ul class="A">
+                        <li class="current">
+                            <a href="#">Контакты</a>
+                        </li>
+                        <li class="current">
+                            <a href="#">Туры</a>
+                            <ul class="AA">
+                                <li class="current">
+                                    <a href="#">Групповые</a>
+                                    <ul class="AAA">
+                                        <li>
+                                            <a href="#">Компания до 3 человек</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Компания до 5 человек</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Компания до 10 человек</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="current">
+                                    <a href="#">Одиночные</a>
+                                    <ul class="AAA">
+                                        <li>
+                                            <a href="#">С гидом</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Без гида</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="current">
+                            <a href="#">Информация о нас</a>
+                        </li>
+                        <li class="current">
+                            <a href="#">Аренда оборудования</a>
+                            <ul class="AA">
+                                <li>
+                                    <a href="#">Палатки</a>
+                                </li>
+                                <li>
+                                    <a href="#">Турестическое снаряжение</a>
+                                </li>
+                                <li>
+                                    <a href="#">Посуда</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
         </div>
 
         <div class="head_two">
@@ -263,7 +314,5 @@
         </div>
     </footer>  
     
-    
-    <script src="script.js"></script>
 </body>
 </html>
